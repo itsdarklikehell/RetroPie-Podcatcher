@@ -10,28 +10,26 @@ CONFIGDIR=/opt/retropie/configs/podcatcher
 }
 
 INSTALL(){
-sudo apt-get update && sudo apt-get upgrade -y
+#sudo apt-get update && sudo apt-get upgrade -y
 cp -R $WORKDIR/podcatcher $ROMSDIR/podcatcher
+clear
 echo "Please choose eighter 'podfox' 'podcatcher' 'greg' 'bashpodder' or 'mashpodder'"
 read CATCHER
+
 if [[ $CATCHER = podfox ]];
 then
+clear
 echo "Selected podcatcher: $CATCHER"
 cd ~/
 git clone https://github.com/brtmr/podfox
 cd podfox
 sudo pip install podfox
 nano ~/.podfox.json
-echo "Usage:"
-echo "    podfox.py import <feed-url> [<shortname>]"
-echo "    podfox.py update [<shortname>]"
-echo "    podfox.py feeds"
-echo "    podfox.py episodes <shortname>"
-echo "    podfox.py download [<shortname> --how-many=<n>]"
 fi
 
 if [[ $CATCHER = podcatcher ]];
 then
+clear
 echo "Selected podcatcher: $CATCHER"
 cd ~/
 git clone https://github.com/doga/podcatcher
@@ -48,6 +46,7 @@ fi
 
 if [[ $CATCHER = greg ]];
 then
+clear
 echo "Selected podcatcher: $CATCHER"
 cd ~/
 git clone https://github.com/manolomartinez/greg
@@ -66,6 +65,7 @@ fi
 
 if [[ $CATCHER = bashpodder ]];
 then
+clear
 echo "Selected podcatcher: $CATCHER"
 cd ~/
 mkdir -p ~/bashpodder
@@ -78,10 +78,14 @@ fi
 
 if [[ $CATCHER = mashpodder ]];
 then
+clear
 echo "Selected podcatcher: $CATCHER"
 cd ~/
 git clone https://github.com/chessgriffin/mashpodder/
 cd mashpodder
+nano mashpodder.sh
+./mashpodder.sh
+ln -s ~/mashpodder/mashpodder.sh /usr/bin/mashpodder
 fi
 
 }
