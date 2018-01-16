@@ -8,6 +8,7 @@ NEWTHEME=/opt/retropie/configs/all/emulationstation/themes/carbon-custom
 NEWART=~/RetroPie-Podcatcher/theme/art
 CONFIGDIR=/opt/retropie/configs/podcatcher
 }
+
 INSTALL(){
 sudo apt-get update && sudo apt-get upgrade -y
 cp -R $WORKDIR/podcatcher $ROMSDIR/podcatcher
