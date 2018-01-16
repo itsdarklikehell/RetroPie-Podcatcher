@@ -17,7 +17,7 @@ read CATCHER
 if [[ $CATCHER = podfox ]];
 then
 echo "Selected podcatcher: $CATCHER"
-cd $WORKDIR
+cd ~/
 git clone https://github.com/brtmr/podfox
 cd podfox
 sudo pip install podfox
@@ -33,7 +33,7 @@ fi
 if [[ $CATCHER = podcatcher ]];
 then
 echo "Selected podcatcher: $CATCHER"
-cd $WORKDIR
+cd ~/
 git clone https://github.com/doga/podcatcher
 cd podcatcher
 # Optional security step (do this once)
@@ -49,7 +49,7 @@ fi
 if [[ $CATCHER = greg ]];
 then
 echo "Selected podcatcher: $CATCHER"
-cd $WORKDIR
+cd ~/
 git clone https://github.com/manolomartinez/greg
 cd greg
 pip3 install --user greg
@@ -67,19 +67,19 @@ fi
 if [[ $CATCHER = bashpodder ]];
 then
 echo "Selected podcatcher: $CATCHER"
-cd $WORKDIR
-mkdir -p $WORKDIR/bashpodder
-wget https://lincgeek.org/bashpodder/bashpodder.shell -O $WORKDIR/bashpodder/bashpodder.shell
-wget https://lincgeek.org/bashpodder/parse_enclosure.xsl -O $WORKDIR/bashpodder/parse_enclosure.xsl
-wget https://lincgeek.org/bashpodder/bp.conf -O $WORKDIR/bashpodder/bp.conf
-wget https://lincgeek.org/bashpodder/gui/bpgui.sh -O $WORKDIR/bashpodder/bpgui.sh
-wget https://lincgeek.org/bashpodder/gui/convert.sh -O $WORKDIR/bashpodder/convert.sh
+cd ~/
+mkdir -p ~/bashpodder
+wget http://lincgeek.org/bashpodder/bashpodder.shell -O $WORKDIR/bashpodder/bashpodder.shell
+wget http://lincgeek.org/bashpodder/parse_enclosure.xsl -O $WORKDIR/bashpodder/parse_enclosure.xsl
+wget http://lincgeek.org/bashpodder/bp.conf -O $WORKDIR/bashpodder/bp.conf
+wget http://lincgeek.org/bashpodder/gui/bpgui.sh -O $WORKDIR/bashpodder/bpgui.sh
+wget http://lincgeek.org/bashpodder/gui/convert.sh -O $WORKDIR/bashpodder/convert.sh
 fi
 
 if [[ $CATCHER = mashpodder ]];
 then
 echo "Selected podcatcher: $CATCHER"
-cd $WORKDIR
+cd ~/
 git clone https://github.com/chessgriffin/mashpodder/
 cd mashpodder
 fi
