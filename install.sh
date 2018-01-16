@@ -14,11 +14,11 @@ sudo apt-get update && sudo apt-get upgrade -y
 echo "Please choose eighter 'podfox' 'podcatcher' 'greg' or 'bashpodder'"
 read CATCHER
 # echo $key
-if [[ $CATCHER = none ]] then
+if [ $CATCHER = none ] then
 echo "Selected podcatcher: $CATCHER"
 fi
 
-if [[ $CATCHER = podfox ]] then
+if [ $CATCHER = podfox ] then
 echo "Selected podcatcher: $CATCHER"
 git clone https://github.com/brtmr/podfox
 cd podfox
@@ -32,7 +32,7 @@ echo "    podfox.py episodes <shortname>"
 echo "    podfox.py download [<shortname> --how-many=<n>]"
 fi
 
-if [[ $CATCHER = podcatcher ]] then
+if [ $CATCHER = podcatcher ] then
 echo "Selected podcatcher: $CATCHER"
 git clone https://github.com/doga/podcatcher
 cd podcatcher
@@ -46,7 +46,7 @@ gem man podcatcher # shows podcatcher MAN page
 man podcatcher
 fi
 
-if [[ $CATCHER = greg ]] then
+if [ $CATCHER = greg ] then
 echo "Selected podcatcher: $CATCHER"
 git clone https://github.com/manolomartinez/greg
 cd greg
@@ -62,7 +62,7 @@ mkdir -p ~/.config/greg && cp `greg retrieveglobalconf` ~/.config/greg/greg.conf
 nano ~/.config/greg/greg.conf
 fi
 
-if [[ $CATCHER = bashpodder ]] then
+if [ $CATCHER = bashpodder ] then
 echo "Selected podcatcher: $CATCHER"
 mkdir -p $WORKDIR/bashpodder
 wget https://lincgeek.org/bashpodder/bashpodder.shell -O $WORKDIR/bashpodder/bashpodder.shell
@@ -71,7 +71,7 @@ wget https://lincgeek.org/bashpodder/bp.conf -O $WORKDIR/bashpodder/bp.conf
 wget https://lincgeek.org/bashpodder/gui/bpgui.sh -O $WORKDIR/bashpodder/bpgui.sh
 wget https://lincgeek.org/bashpodder/gui/convert.sh -O $WORKDIR/bashpodder/convert.sh
 fi
-if [[ $CATCHER = mashpodder ]] then
+if [ $CATCHER = mashpodder ] then
 echo "Selected podcatcher: $CATCHER"
 git clone https://github.com/chessgriffin/mashpodder/
 cd mashpodder
