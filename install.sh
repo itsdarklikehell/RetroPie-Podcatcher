@@ -7,7 +7,7 @@ CURNTHEME=/etc/emulationstation/themes/carbon
 NEWTHEME=/opt/retropie/configs/all/emulationstation/themes/carbon-custom
 NEWART=~/RetroPie-Podcatcher/theme/art
 CONFIGDIR=/opt/retropie/configs/podcatcher
-CATCHER="none"
+#CATCHER="none"
 }
 INSTALL(){
 sudo apt-get update && sudo apt-get upgrade -y
