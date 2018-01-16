@@ -11,17 +11,12 @@ CONFIGDIR=/opt/retropie/configs/podcatcher
 INSTALL(){
 sudo apt-get update && sudo apt-get upgrade -y
 cp -R $WORKDIR/podcatcher $ROMSDIR/podcatcher
-echo "Please choose eighter 'podfox' 'podcatcher' 'greg' or 'bashpodder'"
+echo "Please choose eighter 'podfox' 'podcatcher' 'greg' 'bashpodder' or 'mashpodder'"
 read CATCHER
-
-if [[ $CATCHER = none ]];
-then
-echo "Selected podcatcher: "$CATCHER
-fi
-
 if [[ $CATCHER = podfox ]];
 then
 echo "Selected podcatcher: $CATCHER"
+cd $WORKDIR
 git clone https://github.com/brtmr/podfox
 cd podfox
 pip install podfox
@@ -37,6 +32,7 @@ fi
 if [[ $CATCHER = podcatcher ]];
 then
 echo "Selected podcatcher: $CATCHER"
+cd $WORKDIR
 git clone https://github.com/doga/podcatcher
 cd podcatcher
 # Optional security step (do this once)
@@ -52,6 +48,7 @@ fi
 if [[ $CATCHER = greg ]];
 then
 echo "Selected podcatcher: $CATCHER"
+cd $WORKDIR
 git clone https://github.com/manolomartinez/greg
 cd greg
 pip3 install --user greg
@@ -69,6 +66,7 @@ fi
 if [[ $CATCHER = bashpodder ]];
 then
 echo "Selected podcatcher: $CATCHER"
+cd $WORKDIR
 mkdir -p $WORKDIR/bashpodder
 wget https://lincgeek.org/bashpodder/bashpodder.shell -O $WORKDIR/bashpodder/bashpodder.shell
 wget https://lincgeek.org/bashpodder/parse_enclosure.xsl -O $WORKDIR/bashpodder/parse_enclosure.xsl
@@ -80,6 +78,7 @@ fi
 if [[ $CATCHER = mashpodder ]];
 then
 echo "Selected podcatcher: $CATCHER"
+cd $WORKDIR
 git clone https://github.com/chessgriffin/mashpodder/
 cd mashpodder
 fi
