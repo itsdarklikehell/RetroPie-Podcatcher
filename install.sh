@@ -20,7 +20,7 @@ echo "Selected podcatcher: $CATCHER"
 cd $WORKDIR
 git clone https://github.com/brtmr/podfox
 cd podfox
-pip install podfox
+sudo pip install podfox
 nano ~/.podfox.json
 echo "Usage:"
 echo "    podfox.py import <feed-url> [<shortname>]"
