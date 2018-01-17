@@ -25,7 +25,7 @@ if [ "$CATCHER" = podfox ]; then
   sudo pip install podfox
   nano ~/.podfox.json
 fi
-if [[ $CATCHER = podcatcher ]];
+if [ "$CATCHER" = podcatcher ];
 then
 clear
 echo "Selected podcatcher: $CATCHER"
@@ -42,7 +42,7 @@ gem man podcatcher # shows podcatcher MAN page
 man podcatcher
 fi
 
-if [[ $CATCHER = greg ]];
+if [ "$CATCHER" = greg ];
 then
 clear
 echo "Selected podcatcher: $CATCHER"
@@ -61,7 +61,7 @@ mkdir -p ~/.config/greg && cp `greg retrieveglobalconf` ~/.config/greg/greg.conf
 nano ~/.config/greg/greg.conf
 fi
 
-if [[ $CATCHER = bashpodder ]];
+if [ "$CATCHER" = bashpodder ];
 then
 clear
 echo "Selected podcatcher: $CATCHER"
@@ -74,7 +74,7 @@ wget http://lincgeek.org/bashpodder/gui/bpgui.sh -O $WORKDIR/bashpodder/bpgui.sh
 wget http://lincgeek.org/bashpodder/gui/convert.sh -O $WORKDIR/bashpodder/convert.sh
 fi
 
-if [[ $CATCHER = mashpodder ]];
+if [ "$CATCHER" = mashpodder ];
 then
 clear
 echo "Selected podcatcher: $CATCHER"
@@ -91,12 +91,12 @@ CREATEMENU(){
 echo " = = = = = = = = = = = = = = = = = = = = "
 echo "Setting up EmulationStation menu options...(STILL WIP)..."
 echo " = = = = = = = = = = = = = = = = = = = = "
-mkdir -p $CONFIGDIR
-cp -u $WORKDIR/menu/es_systems.cfg $CONFIGDIR/es_systems.cfg
-cp -u $WORKDIR/menu/emulators.cfg $CONFIGDIR/emulators.cfg
+mkdir -p "$CONFIGDIR"
+cp -u "$WORKDIR"/menu/es_systems.cfg $CONFIGDIR/es_systems.cfg
+cp -u "$WORKDIR"/menu/emulators.cfg $CONFIGDIR/emulators.cfg
 echo " = = = = = = = = = = = = = = = = = = = = "
 echo "Please edit /opt/retropie/configs/all/emulationstation/es_systems.cfg so that is includes the following:"
-cat $WORKDIR/menu/es_systems.cfg
+cat "$WORKDIR"/menu/es_systems.cfg
 echo " = = = = = = = = = = = = = = = = = = = = "
 read -rsp $'Press any key to continue...\n' -n 1 key
 }
@@ -104,9 +104,9 @@ CREATETHEME(){
 echo " = = = = = = = = = = = = = = = = = = = = "
 echo "Installing custom emulationstation theme..."
 echo " = = = = = = = = = = = = = = = = = = = = "
-cp -u $CURNTHEME $NEWTHEME
-cp -u $NEWART $NEWTHEME/podcatcher/art
-cp -u $WORKDIR/theme/theme.xml $NEWTHEME/podcatcher/theme.xml
+cp -u "$CURNTHEME" "$NEWTHEME"
+cp -u "$NEWART" "$NEWTHEME"/podcatcher/art
+cp -u "$WORKDIR"/theme/theme.xml "$NEWTHEME"/podcatcher/theme.xml
 echo "A new cutom theme has been set up at $NEWTHEME"
 echo "Select it in emulationstation to use it"
 read -rsp $'Press any key to continue...\n' -n 1 key
