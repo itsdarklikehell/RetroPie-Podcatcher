@@ -25,7 +25,6 @@ if [ "$CATCHER" = podfox ]; then
   sudo pip install podfox
   nano ~/.podfox.json
 fi
-
 if [[ $CATCHER = podcatcher ]];
 then
 clear
