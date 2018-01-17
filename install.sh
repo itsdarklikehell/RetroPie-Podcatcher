@@ -17,10 +17,6 @@ echo "Please choose eighter 'podfox' 'podcatcher' 'greg' 'bashpodder' or 'mashpo
 read CATCHER
 DIRECTORY=~/
 if [ "$CATCHER" = podfox ]; then
-if [ -d "$DIRECTOR/podfox" ]; then
-  echo "The folder $DIRECTORY/podfox already exists."
-fi
-if [ ! -d "$DIRECTORY/podfox" ]; then
   clear
   echo "Selected podcatcher: $CATCHER"
   cd ~/
@@ -28,7 +24,6 @@ if [ ! -d "$DIRECTORY/podfox" ]; then
   cd podfox
   sudo pip install podfox
   nano ~/.podfox.json
-fi
 fi
 
 if [[ $CATCHER = podcatcher ]];
