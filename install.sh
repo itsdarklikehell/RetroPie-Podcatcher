@@ -15,16 +15,20 @@ cp -R $WORKDIR/podcatcher $ROMSDIR/podcatcher
 clear
 echo "Please choose eighter 'podfox' 'podcatcher' 'greg' 'bashpodder' or 'mashpodder'"
 read CATCHER
-
-if [[ $CATCHER = podfox ]];
-then
-clear
-echo "Selected podcatcher: $CATCHER"
-cd ~/
-git clone https://github.com/brtmr/podfox
-cd podfox
-sudo pip install podfox
-nano ~/.podfox.json
+DIRECTORY=~/
+if [ "$CATCHER" = podfox ]; then
+if [ -d "$DIRECTOR/podfox" ]; then
+  echo "The folder $DIRECTORY/podfox already exists."
+fi
+if [ ! -d "$DIRECTORY/podfox" ]; then
+  clear
+  echo "Selected podcatcher: $CATCHER"
+  cd ~/
+  git clone https://github.com/brtmr/podfox
+  cd podfox
+  sudo pip install podfox
+  nano ~/.podfox.json
+fi
 fi
 
 if [[ $CATCHER = podcatcher ]];
