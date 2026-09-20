@@ -33,3 +33,10 @@ others in the date-based directory. The user can choose to download all, none,
 or a set number of episodes per feed. The user can also choose to mark the
 episodes as downloaded (without actually downloading them) which can be used
 to 'catch up' to a podcast.
+---
+
+## 🎥 Gource Visualization
+
+De ontwikkelhistorie van dit project in een film:
+
+<video src="https://raw.githubusercontent.com/itsdarklikehell/RetroPie-Podcatcher/master/gource.mp4" controls width="100%"></video>
