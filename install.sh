@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 CONFIGURE(){
 WORKDIR=~/RetroPie-Podcatcher
 ROMSDIR=~/RetroPie/roms
